@@ -1,0 +1,89 @@
+###POST
+POST http://localhost:8024/api/tasks
+Content-Type: application/json
+
+{
+    "folderId": "61e822af733443461ef8f0ad"
+}
+
+###POST
+POST http://localhost:8024/api/task
+Content-Type: application/json
+
+{
+    "folderId": "61f3f08d99884754d114fe86",
+    "task": "pruebaTask2"
+}
+
+###PUT
+PUT http://localhost:8024/api/task/update
+Content-Type: application/json
+
+{
+    "id": "61e6c9a2882116cafadc75f9",
+    "task": "prueba4"
+}
+
+###PUT
+PUT http://localhost:8024/api/task/check
+Content-Type: application/json
+
+{
+    "id": "61f44edd4f18c06cb54e3d7a"
+}
+
+###DELETE
+DELETE http://localhost:8024/api/task/delete
+Content-Type: application/json
+
+{
+    "id": "61e6c994882116cafadc75f5"
+}
+
+###GET
+GET http://localhost:8024/api/folders
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU5Nzg2MDNiMWQ1ZjE4MWQ1NGU0MzgiLCJuYW1lIjoiUGVwaXRhIiwiaWF0IjoxNjQyNjk0Mjk2fQ.GZobdSEBY7861oyfBTCSMh_q4yqBJquTbEwtAE_sPKc
+
+###DELETE
+DELETE http://localhost:8024/api/folder/delete
+Content-Type: application/json
+
+{
+    "folderId": "61f19fea2b1fb893b8039eac"
+}
+
+###POST
+POST http://localhost:8024/api/folder
+Content-Type: application/json
+
+{
+    "folderName": "prueba2"
+}
+
+###PUT
+PUT http://localhost:8024/api/folder/update
+Content-Type: application/json
+
+{
+    "_id": "61f1a03b2b1fb893b8039ebe",
+    "folderName": "pruebita"
+}
+
+###POST
+POST http://localhost:8024/api/signup
+Content-Type: application/json
+
+{
+    "name": "Pepota",
+    "password": "Password"
+}
+
+###POST
+POST http://localhost:8024/api/signin
+Content-Type: application/json
+
+{
+    "name": "Pepita",
+    "password": "Password"
+}

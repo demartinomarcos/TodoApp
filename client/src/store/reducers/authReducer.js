@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import jwtDecode from 'jwt-decode';
 
+
 const initialState = {
   token: localStorage.getItem('token'),
   name: null,

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AppBar, Typography, Toolbar, Button, IconButton, Menu, MenuItem, Avatar, Divider, ListItemIcon } from '@mui/material';
+import { AppBar, Typography, Toolbar, IconButton, Menu, MenuItem, ListItemIcon } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { AccountCircleOutlined, Logout, Login, PersonAddOutlined } from '@mui/icons-material';
 import { useSelector, useDispatch } from 'react-redux';
@@ -22,7 +22,6 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
   const classes = useStyles();
-  const state = useSelector(state => state);
   const auth = useSelector(state => state.auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();

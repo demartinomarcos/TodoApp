@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Typography, Button, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import Task from './Task';
-import { getTasks } from '../../store/actions/taskAction';
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,10 +27,6 @@ const ListTasks = ({ setTask }) => {
   const task = useSelector((state) => state.task)
   const tasks = task.tasks;
   const taskFolder = task.taskFolder;
-
-  useEffect(() => {
-    if (taskFolder) return dispatch(getTasks(taskFolder._id))
-  }, [dispatch])
 
   const handleClose = () => {
     dispatch({ type: 'REFRESH_TASKS' })

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Typography, Button, ButtonGroup } from '@mui/material';
 import { Create, FolderDeleteOutlined, FolderOpen } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { deleteTaskFolder, openTaskFolder } from '../../store/actions/taskFolderAction';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const useStyle = makeStyles({
@@ -21,7 +21,6 @@ const TaskFolder = ({ taskFolder, setTaskFolder }) => {
   const classes = useStyle();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const proceed = useSelector((state) => state)
 
   const handleUpdate = () => {
     setTaskFolder(taskFolder)
